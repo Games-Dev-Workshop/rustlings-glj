@@ -1,3 +1,8 @@
+
+# Learning RUST #
+
+This is my own clone of the rustlings project I'm using to learn RUST, just a fork at the moment.  I'm working in a branch based on the 5.4.1 tag as suggested in the instructions. 
+
 # rustlings 🦀❤️
 
 Greetings and welcome to `rustlings`. This project contains small exercises to get you used to reading and writing Rust code. This includes reading and responding to compiler messages!
