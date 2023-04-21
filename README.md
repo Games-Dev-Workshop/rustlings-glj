@@ -3,6 +3,42 @@
 
 This is my own clone of the rustlings project I'm using to learn RUST, just a fork at the moment.  I'm working in a branch based on the 5.4.1 tag as suggested in the instructions. 
 
+```bash
+gh repo clone Games-Dev-Workshop/rustlings-glj
+git checkout 5.4.1
+git switch -c GLJ
+```
+
+Next step wouldn't work unless I installed ```cargo``` also need ```gcc``` but I'm pretty sure I have that (see Linux Install). 
+
+```bash 
+cd rustlings-glj
+cargo install --force --path .
+```
+**Note:** Install instructions say that if there are errors run ```rustup update``` to ensure the build chain is up to date. 
+
+## Fedora Linux Install ##
+
+```bash
+sudo dnf install gcc
+sudo dnf install cargo
+```
+
+Interestingly ```cargo``` pulled in rust and rust-std-static. 
+
+Had to add rust to my ```~/.profile```
+
+```bash
+# set PATH so it includes user's cargo bin if it exists
+if [ -d "$HOME/.cargo/bin" ] ; then
+    PATH="$HOME/.cargo/bin:$PATH"
+fi
+```
+
+I restarted vs code at this point, to update my terminal - I could probably have used ```source ~/.profile```
+
+
+
 # rustlings 🦀❤️
 
 Greetings and welcome to `rustlings`. This project contains small exercises to get you used to reading and writing Rust code. This includes reading and responding to compiler messages!
