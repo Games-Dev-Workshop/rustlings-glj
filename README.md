@@ -39,6 +39,8 @@ I restarted vs code at this point, to update my terminal - I could probably have
 
 
 
+
+
 # rustlings 🦀❤️
 
 Greetings and welcome to `rustlings`. This project contains small exercises to get you used to reading and writing Rust code. This includes reading and responding to compiler messages!
