@@ -40,7 +40,7 @@ I restarted vs code at this point, to update my terminal - I could probably have
 To start rustings run:
 
 ```bash
-rustings watch
+rustlings watch
 ```
 
 Essentially all the work is then done in the console, bit of a gotcha trying to find the right files but it's actually clear from the error messages in the first one.  Then it's a question of working your way though finding the errors.  I'm curious as to if I'll be able to retain anything from this. 
