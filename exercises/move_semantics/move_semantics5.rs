@@ -3,13 +3,20 @@
 // adding, changing or removing any of them.
 // Execute `rustlings hint move_semantics5` or use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
 
 fn main() {
     let mut x = 100;
+
+    // y and z here are references
+    // and mutable ones i.e. &mut rather than &
+
+    // y is borrowing x
     let y = &mut x;
-    let z = &mut x;
     *y += 100;
+
+    // z is borrowing x. 
+    let z = &mut x;
     *z += 1000;
+
     assert_eq!(x, 1200);
 }

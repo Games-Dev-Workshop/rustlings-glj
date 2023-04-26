@@ -7,21 +7,34 @@
 // in the signatures for now. If anything, this is a good way to peek ahead
 // to future exercises!)
 
-// I AM NOT DONE
 
 fn main() {
     let original_price = 51;
     println!("Your sale price is {}", sale_price(original_price));
+    println!("Your sale price is {}", sale_price2(original_price));
 }
 
-fn sale_price(price: i32) -> {
+//A return marks the end of an execution path in a function:
+fn sale_price(price: i32) -> i32 {
     if is_even(price) {
-        price - 10
+        return price - 10
     } else {
-        price - 3
+        return price - 3
     }
 }
 
+fn sale_price2(price: i32) -> i32 {
+    let mut sp : i32;
+    if is_even(price) {
+        sp = price - 10
+    } else {
+        sp = price - 3
+    }
+
+    return sp;
+}
+
+// return is not needed when the returned value is the last expression in the function. In this case the ; is omitted:
 fn is_even(num: i32) -> bool {
     num % 2 == 0
 }
