@@ -45,6 +45,17 @@ rustlings watch
 
 Essentially all the work is then done in the console, bit of a gotcha trying to find the right files but it's actually clear from the error messages in the first one.  Then it's a question of working your way though finding the errors.  I'm curious as to if I'll be able to retain anything from this. 
 
+# Chromebook #
+
+I lost trac a bit, I think I had to install something manually then once I had rust/cargo installed I found I could 
+
+```cargo build``` - which worked
+
+but to get it built and installed it used 
+
+```cargo install --path . --locked```
+
+That seemed to work. 
 
 
 # rustlings 🦀❤️
