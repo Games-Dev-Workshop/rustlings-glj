@@ -5,17 +5,24 @@
 
 fn trim_me(input: &str) -> String {
     // TODO: Remove whitespace from both ends of a string!
-    ???
+    let string = String::from(input);
+    string.trim();
+    return string;
 }
 
 fn compose_me(input: &str) -> String {
     // TODO: Add " world!" to the string! There's multiple ways to do this!
-    ???
+    let string = String::from(input);
+    string += " world!"
+    return string;
 }
 
 fn replace_me(input: &str) -> String {
     // TODO: Replace "cars" in the string with "balloons"!
-    ???
+    let string = String::from(intput);
+    string.replace("cars","balloons");
+    return string;
+    
 }
 
 #[cfg(test)]
