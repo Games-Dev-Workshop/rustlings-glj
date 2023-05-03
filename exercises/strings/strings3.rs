@@ -1,26 +1,29 @@
 // strings3.rs
 // Execute `rustlings hint strings3` or use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
 
 fn trim_me(input: &str) -> String {
     // TODO: Remove whitespace from both ends of a string!
-    let string = String::from(input);
-    string.trim();
+    let mut string = String::from(input);
+    // This reutrns part of a string (a &str) so we need to make
+    // a string from it. Weird. 
+    string = String::from(string.trim());
     return string;
 }
 
 fn compose_me(input: &str) -> String {
     // TODO: Add " world!" to the string! There's multiple ways to do this!
-    let string = String::from(input);
-    string += " world!"
+    let mut string = String::from(input);
+    // This operation also returns a string. 
+    string += " world!";
     return string;
 }
 
 fn replace_me(input: &str) -> String {
     // TODO: Replace "cars" in the string with "balloons"!
-    let string = String::from(intput);
-    string.replace("cars","balloons");
+    let mut string = String::from(input);
+    // This returns a new String
+    string = string.replace("cars","balloons");
     return string;
     
 }
