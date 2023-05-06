@@ -18,7 +18,8 @@
 // - The output element is going to be a Vector of strings.
 // No hints this time!
 
-// I AM NOT DONE
+// I had to cheat and look this up, I wasn't going quite the right way
+// there are string handling methods to repat strings and append them. 
 
 pub enum Command {
     Uppercase,
@@ -38,7 +39,8 @@ mod my_module {
             match command {
                 Command::Uppercase => output.push(string.to_uppercase().to_string()),
                 Command::Trim => output.push(string.trim().to_string()),
-                Command::Append(times) => output.extend(vec![string.to_string(), times])
+                //Command::Append(times) => output.extend(vec![times,string.to_string()])
+                Command::Append(count) => output.push(string.to_string() + &"bar".repeat(*count))
             }
         }
         output
