@@ -4,8 +4,6 @@
 // Don't change any line other than the marked one.
 // Execute `rustlings hint traits4` or use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
-
 pub trait Licensed {
     fn licensing_info(&self) -> String {
         "some information".to_string()
@@ -20,7 +18,9 @@ impl Licensed for SomeSoftware {}
 impl Licensed for OtherSoftware {}
 
 // YOU MAY ONLY CHANGE THE NEXT LINE
-fn compare_license_types(software: ??, software_two: ??) -> bool {
+// So this method takes ownership of two structures which implement the Licenced Trait. 
+// I think it would make more sense here to use referneces, but I guess it's OK. 
+fn compare_license_types(software: impl Licensed, software_two: impl Licensed) -> bool {
     software.licensing_info() == software_two.licensing_info()
 }
 
