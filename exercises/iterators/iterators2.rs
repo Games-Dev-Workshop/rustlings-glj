@@ -30,7 +30,15 @@ pub fn capitalize_first(input: &str) -> String {
 // Return a vector of strings.
 // ["hello", "world"] -> ["Hello", "World"]
 pub fn capitalize_words_vector(words: &[&str]) -> Vec<String> {
-    vec!["hello".to_string(), "world".to_string()]
+   // vec!["hello".to_string(), "world".to_string()]
+   let mut myVec:Vec<String> = Vec::new();
+   //let itr = words.iter();
+
+   for n in words {
+    myVec.push(capitalize_first(n));
+   }
+   
+
 }
 
 // Step 3.
