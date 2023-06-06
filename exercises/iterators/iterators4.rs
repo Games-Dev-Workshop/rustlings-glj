@@ -13,6 +13,32 @@ pub fn factorial(num: u64) -> u64 {
     // For an extra challenge, don't use:
     // - recursion
     // Execute `rustlings hint iterators4` for hints.
+    
+/* 
+    //This is how I'd have done it 
+    let mut prod: u64 = 1;
+
+    for n in 1..num + 1 {
+        prod = prod * n;
+    }
+    
+    return prod;
+*/
+
+    // Trying to work out how the fuck fold works!
+    let mut prod: u64 = 1;
+    let mut list: Vec<u64> = Vec::new();
+
+    for n in 1..num + 1 {
+        list.push(n);    
+    }
+
+    list.iter().fold(0, |prod, x| prod * x);
+
+    return prod;
+
+    // This is the solution ... I'd have never come up with this.
+    // (1..num + 1).fold(1, |prod, x| prod * x)
 }
 
 #[cfg(test)]
